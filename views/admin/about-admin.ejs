@@ -63,19 +63,19 @@ halaman berisikan tentang PT
       <td><input required type="text" name="visi" id="visi_txt" placeholder="Insert visi..."></td>
     </tr>
     <td><label for="">Misi</label></td>
-    <td><textarea rows="15" cols="50" name="misi" id="misi_txt" required
-        placeholder="Insert misi..."></textarea></td>
-    <td><p class="petunjuk-misi">
-      Contoh Input: <br>
-      1. isi 1 (gunakan enter untuk baris baru) <br>
-      2. isi 2 <br>
-      3. dst.....
-    </p>
+    <td><textarea rows="15" cols="50" name="misi" id="misi_txt" required placeholder="Insert misi..."></textarea></td>
+    <td>
+      <p class="petunjuk-misi">
+        Contoh Input: <br>
+        1. isi 1 (gunakan enter untuk baris baru) <br>
+        2. isi 2 <br>
+        3. dst.....
+      </p>
     </td>
-      </tr>
-   <tr>
-    <td></td>
-    <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Clear</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Clear</button></td>
     </tr>
   </table>
 </form>
@@ -103,7 +103,8 @@ halaman berisikan tentang PT
             <%= dataVisiMisi[i].visi %>
           </td>
           <td><%- dataVisiMisi[i].misi.replace(/(\n)/g, '<br>' ).replace(/(\r\n)/g, '<br>' ) %></td>
-          <td class="edit-delete">||<a href="/visi-misi-admi-byId<%= dataVisiMisi[i].id_visi_misi %>">&nbsp;edit&nbsp;</a>||
+          <td class="edit-delete">||<a
+              href="/visi-misi-admi-byId<%= dataVisiMisi[i].id_visi_misi %>">&nbsp;edit&nbsp;</a>||
             <a href="/delete-visi-misi/<%= dataVisiMisi[i].id_visi_misi %>">&nbsp;delete&nbsp;</a>||
           </td>
         </tr>

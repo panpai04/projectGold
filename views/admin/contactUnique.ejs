@@ -3,20 +3,23 @@
 <br>
 <form action=<%=`updateContact/${dataContact[0].id_contact}?_method=PUT`%> method="post">
     <table>
-    <tr>
-    <td><label for="Telephone_txt">Telephone</label></td>
-    <td><input required type="text" value="<%= dataContact[0].telephone %>" name="telephone" id="Telephone_txt" placeholder="Insert telepone number..."></td>
-</tr> 
-<td><label for="alamat_contact_txt">Address</label></td>
-<td><input required type="text" value="<%= dataContact[0].alamat_contact %>" name="alamat_contact" id="alamat_contact_txt" placeholder="Insert address..."></td>
-</tr>
-</tr> 
-<td><label for="email_contact_txt">email contact</label></td>
-<td><input type="text" value="<%= dataContact[0].email_contact %>" name="email_contact" id="email_contact_txt" required placeholder="Insert url image..."></td>
-</tr>
-</tr> 
-<td></td>
-<td><button type="submit">Update</button></td>
-</tr>
-</table>
+        <tr>
+            <td><label for="Telephone_txt">Telephone</label></td>
+            <td><input required type="text" value="<%= dataContact[0].telephone %>" name="telephone" id="Telephone_txt"
+                    placeholder="Insert telepone number..."></td>
+        </tr>
+        <td><label for="alamat_contact_txt">Address</label></td>
+        <td><input required type="text" value="<%= dataContact[0].alamat_contact %>" name="alamat_contact"
+                id="alamat_contact_txt" placeholder="Insert address..."></td>
+        </tr>
+        </tr>
+        <td><label for="email_contact_txt">email contact</label></td>
+        <td><input type="text" value="<%= dataContact[0].email_contact %>" name="email_contact" id="email_contact_txt"
+                required placeholder="Insert url image..."></td>
+        </tr>
+        </tr>
+        <td></td>
+        <td><button type="submit">Update</button></td>
+        </tr>
+    </table>
 </form>

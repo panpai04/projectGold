@@ -1,17 +1,19 @@
+<h1>Ini Halaman About
 
-  <h1>Ini Halaman About
-
-  </h1>
-  <%for (i=0; i< dataAbout.length; i++ ){%>
-    <p> judul: <%= dataAbout[i].judul_about %>
-    </p>
-    <p class="content"> content: <%= dataAbout[i].isi_about %>
-    </p>
-    <p> img: <%= dataAbout[i].img_about %>
-    </p>
-    <br>
-    <% };%>
-
-    <p>visi : <%= dataVisiMisi[0].visi%></p>
-    <p>misi : <%- dataVisiMisi[0].misi.replace(/(\n)/g, '<br>').replace(/(\r\n)/g, '<br>')%></p>
-
+</h1>
+<%for (i=0; i< dataAbout.length; i++ ){%>
+  <p> judul: <%= dataAbout[i].judul_about %>
+  </p>
+  <p class="content"> content: <%= dataAbout[i].isi_about %>
+  </p>
+  <p> img: <%= dataAbout[i].img_about %>
+  </p>
+  <br>
+  <% };%>
+    <% if (!dataVisiMisi.length) {%>
+      <p>Data masih Kosong. Silahkan Input Terlebih dahulu</p>
+      <% } else {%>
+        <p>visi : <%= dataVisiMisi[0].visi%>
+        </p>
+        <p>misi : <%- dataVisiMisi[0].misi.replace(/(\n)/g, '<br>' ).replace(/(\r\n)/g, '<br>' )%></p>
+        <%}%>

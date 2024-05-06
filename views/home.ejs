@@ -1,23 +1,28 @@
-
 <h1>ini halaman home</h1>
 <h3>ini data About</h3>
 <div class="isi">
-    <p> judul: <%= dataAbout[0].judul_about %>
-    </p>
-    <img class="img-large" src="<%= dataAbout[0].img_about %>" alt="this is picture of about">
-    <p class="content"> content: <%= dataAbout[0].isi_about %>
-    </p>
+    <% if (!dataAbout.length) {%>
+        <p>Data masih Kosong. Silahkan Input Terlebih dahulu</p>
+        <% } else {%>
+            <p> judul: <%=dataAbout[0].judul_about %>
+            </p>
+            <img class="img-large" src="<%= dataAbout[0].img_about %>" alt="this is picture of about">
+            <p class="content"> content: <%= dataAbout[0].isi_about %>
+            </p>
+            <%}%>
 </div>
 <br>
 <div class="isi">
     <h3>ini data project</h3>
+    <% if (!dataProject.length) {%>
+        <p>Data masih Kosong. Silahkan Input Terlebih dahulu</p>
+        <% } else {%>
+            <p> judul: <%= dataProject[0].judul_project %>
+            </p>
+            <img class="img-large" src="<%= dataProject[0].img_project %>" alt="this is picture of project">
+            <p class="content"> content: <%= dataProject[0].content_project %>
+            </p>
+            <%}%>
 
-    <p> judul: <%= dataProject[0].judul_project %>
-    </p>
-    <img class="img-large" src="<%= dataProject[0].img_project %>" alt="this is picture of project">
-    <p class="content"> content: <%= dataProject[0].content_project %>
-    </p>
-
-
-    <br>
+                <br>
 </div>

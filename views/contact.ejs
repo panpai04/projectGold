@@ -5,13 +5,17 @@
     <tr width="100%">
         <td width="70%">
             <h1>Address and Phone</h1><br><br><br>
-            <p> Telephone: <%= dataContact[0].telephone %>
-            </p><br><br><br>
-            <p> alamat: <%= dataContact[0].alamat_contact %>
-            </p><br><br><br>
-            <p> email: <%= dataContact[0].email_contact %>
-            </p>
-            <br>
+            <% if (!dataContact.length) {%>
+                <p>Data masih Kosong. Silahkan Input Terlebih dahulu</p>
+                <% } else {%>
+                    <p> Telephone: <%= dataContact[0].telephone %>
+                    </p><br><br><br>
+                    <p> alamat: <%= dataContact[0].alamat_contact %>
+                    </p><br><br><br>
+                    <p> email: <%= dataContact[0].email_contact %>
+                    </p>
+                    <br>
+                    <%}%>
         </td>
         <td valign="top">
             <h1>business hours</h1><br><br><br>

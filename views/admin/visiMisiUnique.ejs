@@ -1,25 +1,27 @@
 <h1>Halaman Edit Visi Misi</h1>
 <br>
 <form action=<%=`updateVisiMisi/${dataVisiMisi[0].id_visi_misi}?_method=PUT`%> method="post">
-    <table>
-      <tr>
-        <td><label for="visi_txt">Visi</label></td>
-        <td><input required value="<%= dataVisiMisi[0].visi %>" type="text" name="visi" id="visi_txt" placeholder="Insert visi..."></td>
-      </tr>
-      <td><label for="">Misi</label></td>
-      <td><textarea rows="15" cols="50" name="misi" id="misi_txt" required
-          placeholder="Insert misi..."><%= dataVisiMisi[0].misi %></textarea></td>
-      <td><p class="petunjuk-misi">
+  <table>
+    <tr>
+      <td><label for="visi_txt">Visi</label></td>
+      <td><input required value="<%= dataVisiMisi[0].visi %>" type="text" name="visi" id="visi_txt"
+          placeholder="Insert visi..."></td>
+    </tr>
+    <td><label for="">Misi</label></td>
+    <td><textarea rows="15" cols="50" name="misi" id="misi_txt" required
+        placeholder="Insert misi..."><%= dataVisiMisi[0].misi %></textarea></td>
+    <td>
+      <p class="petunjuk-misi">
         Contoh Input: <br>
         1. isi 1 (gunakan enter untuk baris baru) <br>
         2. isi 2 <br>
         3. dst.....
       </p>
-      </td>
-        </tr>
-     <tr>
+    </td>
+    </tr>
+    <tr>
       <td></td>
       <td><button type="submit">Update</button></td>
-      </tr>
-    </table>
-  </form>
+    </tr>
+  </table>
+</form>
