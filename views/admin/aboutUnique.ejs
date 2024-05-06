@@ -1,0 +1,22 @@
+<h1>Halaman Edit About</h1>
+<br>
+<form action=<%=`updateAbout/${dataAbout[0].id_about}?_method=PUT`%> method="post">
+    <table>
+    <tr>
+    <td><label for="title_about_txt">Title</label></td>
+    <td><input required type="text" value="<%= dataAbout[0].judul_about %>" name="judul_about" id="title_about_txt" placeholder="Insert title..."></td>
+</tr> 
+<td><label for="">Content</label></td>
+<td><textarea rows="15" cols="50" name="content_about" id="content_about_txt" required placeholder="Insert content..."><%- dataAbout[0].isi_about %></textarea></td>
+</tr>
+</tr> 
+<td><label for="img_about_txt">Link Image</label></td>
+<td><input type="text" value="<%= dataAbout[0].img_about %>" name="img_about" id="img_about_txt" required placeholder="Insert url image..."></td>
+</tr>
+</tr> 
+<td></td>
+<td><button type="submit">Update</button></td>
+</tr>
+</table>
+</form>
+

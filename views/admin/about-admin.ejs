@@ -1,0 +1,112 @@
+<h1>Add About</h1>
+<br>
+<form action="/input-about" method="post">
+  <table>
+    <tr>
+      <td><label for="title_about_txt">Title</label></td>
+      <td><input required type="text" name="judul_about" id="title_about_txt" placeholder="Insert title..."></td>
+    </tr>
+    <td><label for="">Content</label></td>
+    <td><textarea rows="15" cols="50" name="content_about" id="content_about_txt" required
+        placeholder="Insert content..."></textarea></td>
+    </tr>
+    </tr>
+    <td><label for="img_about_txt">Link Image</label></td>
+    <td><input type="text" name="img_about" id="img_about_txt" required placeholder="Insert url image..."></td>
+    </tr>
+    </tr>
+    <td></td>
+    <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Clear</button></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<h1>List About</h1>
+halaman berisikan tentang PT
+<table>
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th width="10%">TITTLE ABOUT</th>
+      <th>CONTENT ABOUT</th>
+      <th>IMAGE ABOUT</th>
+      <th width="10%">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let x=1 %>
+      <%for (i=0; i< dataAbout.length; i++ ){ %>
+        <tr>
+          <td>
+            <%= x++ %>
+          </td>
+          <td>
+            <%= dataAbout[i].judul_about %>
+          </td>
+          <td><%- dataAbout[i].isi_about.replace(/(\n)/g, '<br>' ).replace(/(\r\n)/g, '<br>' ) %></td>
+          <td><a href="<%= dataAbout[i].img_about %>">
+              <%= dataAbout[i].img_about %>
+            </a></td>
+          <td class="edit-delete">||<a href="/about-admin-byId<%= dataAbout[i].id_about %>">&nbsp;edit&nbsp;</a>||<a
+              href="/deleteAbout/<%= dataAbout[i].id_about %>">&nbsp;delete&nbsp;</a>||</td>
+        </tr>
+        <%}%>
+  </tbody>
+</table>
+<br><br>
+<h1>Add Visi Misi</h1>
+<br>
+<form action="/input-visi-misi" method="post">
+  <table>
+    <tr>
+      <td><label for="visi_txt">Visi</label></td>
+      <td><input required type="text" name="visi" id="visi_txt" placeholder="Insert visi..."></td>
+    </tr>
+    <td><label for="">Misi</label></td>
+    <td><textarea rows="15" cols="50" name="misi" id="misi_txt" required
+        placeholder="Insert misi..."></textarea></td>
+    <td><p class="petunjuk-misi">
+      Contoh Input: <br>
+      1. isi 1 (gunakan enter untuk baris baru) <br>
+      2. isi 2 <br>
+      3. dst.....
+    </p>
+    </td>
+      </tr>
+   <tr>
+    <td></td>
+    <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Clear</button></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<h1>List Visi Misi</h1><br>
+<h5>Note: Hanya data pertama yang akan ditampilkan di halaman user.</h5>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th>VISI</th>
+      <th>MISI</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let x1=1 %>
+      <%for (i=0; i< dataVisiMisi.length; i++ ){ %>
+        <tr>
+          <td>
+            <%= x1++ %>
+          </td>
+          <td>
+            <%= dataVisiMisi[i].visi %>
+          </td>
+          <td><%- dataVisiMisi[i].misi.replace(/(\n)/g, '<br>' ).replace(/(\r\n)/g, '<br>' ) %></td>
+          <td class="edit-delete">||<a href="/visi-misi-admi-byId<%= dataVisiMisi[i].id_visi_misi %>">&nbsp;edit&nbsp;</a>||
+            <a href="/delete-visi-misi/<%= dataVisiMisi[i].id_visi_misi %>">&nbsp;delete&nbsp;</a>||
+          </td>
+        </tr>
+        <% } %>
+  </tbody>
+</table>

@@ -1,0 +1,70 @@
+<h1>Add Contact</h1>
+
+<br>
+<form action="/input-contact" method="post">
+    <table>
+    <tr>
+    <td><label for="Telephone_txt">Telephone</label></td>
+    <td><input required type="text" name="telephone" id="Telephone_txt" placeholder="Insert telepone number..."></td>
+</tr> 
+<td><label for="alamat_contact_txt">Address</label></td>
+<td><input required type="text" value="" name="alamat_contact" id="alamat_contact_txt" placeholder="Insert address..."></td>
+</tr>
+</tr> 
+<td><label for="email_contact_txt">email contact</label></td>
+<td><input type="text" value="" name="email_contact" id="email_contact_txt" required placeholder="Insert url image..."></td>
+</tr>
+</tr> 
+<td></td>
+    <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Clear</button></td>
+</tr>
+</table>
+</form>
+
+<h1>List Contact</h1>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>TELEPHONE</th>
+        <th>ALAMAT</th>
+        <th>EMAIL</th>
+        <th>ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let y=1 %>
+      <%for (i=0; i< dataContact.length; i++ ){ %>
+        <tr>
+          <td><%= y++ %></td>
+          <td><%= dataContact[i].telephone %></td>
+          <td><%= dataContact[i].alamat_contact %></td>
+          <td><%= dataContact[i].email_contact %></td>
+          <td class="edit-delete" >||<a href="/contact-admin-byId<%= dataContact[i].id_contact %>">&nbsp;edit&nbsp;</a>||
+            <a href="/delete-contact/<%= dataContact[i].id_contact %>">&nbsp;delete&nbsp;</a>||
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+  <br><br>
+  <h1>List Work Hours</h1>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td> </td>
+        </tr>
+    </tbody>
+  </table>
+  <br><br>

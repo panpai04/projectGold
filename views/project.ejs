@@ -1,0 +1,27 @@
+
+<h1>Ini Halaman project
+
+</h1>
+<%for (i=0; i< dataProject.length; i++ ){%>
+  <p> judul: <%= dataProject[i].judul_project %>
+  </p>
+  <p class="content"> content: <%= dataProject[i].content_project %>
+  </p>
+  <p> img: <%= dataProject[i].img_project %>
+  </p>
+  <br>
+  <% };%>
+  <br><br><br>
+  <h1>data our project</h1>
+  <%for (a=0; a< dataProject.length; a++ ){%>
+    <p> nama tempat: <%= dataOurProject[a].nama_tempat_project %>
+    </p>
+    <p class="content"> alamat: <%= dataOurProject[a].alamat_project %>
+    </p>
+    <p> img: <%= dataOurProject[a].img_our_project %>
+    </p>
+    <br>
+    <% };%>
+
+
+

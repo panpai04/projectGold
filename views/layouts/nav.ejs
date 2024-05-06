@@ -1,0 +1,29 @@
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-chech">|||</i>
+    </label>
+    <label class="logo"><a href="/">PT. Jaya Terbuka</a></label>
+  
+    
+      <% if (!akun) { %>
+        <ul>
+            <li><a class="active" href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/project">PROJECT</a></li>
+            <li><a href="/contact ">CONTACT</a></li>
+        </ul>
+      <% } else {%>
+        <ul>
+            <li><a href="/admin">HOME</a></li>
+            <li><a href="/about-admin">ABOUT</a></li>
+            <li><a href="/project-admin">PROJECT</a></li>
+            <li><a href="/contact-admin">CONTACT</a></li>
+        </ul>
+        <%}%>
+            
+        
+              
+</nav>
+
+

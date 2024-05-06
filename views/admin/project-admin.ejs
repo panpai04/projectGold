@@ -1,0 +1,53 @@
+<h1>Project</h1>
+<p>berisikan artikel untuk yang berada di halaman project</p>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th>title</th>
+      <th>CONTENT</th>
+      <th>IMAGE</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let x=1 %>
+    <%for (i=0; i< dataProject.length; i++ ){%>
+      <tr>
+        <td> <%= x++ %></td>
+        <td><%= dataProject[i].judul_project %></td>
+        <td><%= dataProject[i].content_project %></td>
+        <td><a href="<%= dataProject[i].img_project %>"><%= dataProject[i].img_project %></a></td>
+        <td></td>
+      </tr>
+      <% };%>
+  </tbody>
+</table>
+<br><br>
+<h1>List Our Project</h1>
+<p>berisikan project yang sudah di selesaikan dan sedang berjalan.</p>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th>NAMA TEMPAT</th>
+      <th>ALAMAT</th>
+      <th>IMAGE</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let x1=1 %>
+    <%for (a=0; a< dataProject.length; a++ ){%>
+      <tr>
+        <td><%= x1++ %></td>
+        <td><%= dataOurProject[a].nama_tempat_project %></td>
+        <td><%= dataOurProject[a].alamat_project %></td>
+        <td><a href="<%= dataOurProject[a].img_our_project %>"><%= dataOurProject[a].img_our_project %></a></td>
+        <td></td>
+      </tr>
+      <% };%>
+  </tbody>
+</table>
