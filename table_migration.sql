@@ -54,31 +54,6 @@ CREATE TABLE public.project (
 );
 
 
--- public.visi definition
-
--- Drop table
-
--- DROP TABLE public.visi;
-
-CREATE TABLE public.visi (
-	id_visi serial4 NOT NULL,
-	visi varchar NULL
-);
-
-
--- public.visi_misi definition
-
--- Drop table
-
--- DROP TABLE public.visi_misi;
-
-CREATE TABLE public.visi_misi (
-	id_visi_misi int4 DEFAULT nextval('misi_id_misi_seq'::regclass) NOT NULL,
-	misi varchar NULL,
-	visi varchar NULL
-);
-
-
 -- public.work_hours definition
 
 -- Drop table
@@ -89,4 +64,17 @@ CREATE TABLE public.work_hours (
 	id_work serial4 NOT NULL,
 	work_hours varchar NULL,
 	days varchar NULL
+);
+
+
+-- public.visi_misi definition
+
+-- Drop table
+
+-- DROP TABLE public.visi_misi;
+
+CREATE TABLE public.visi_misi (
+	id_visi_misi serial4 NOT NULL,
+	misi varchar NULL,
+	visi varchar NULL
 );
