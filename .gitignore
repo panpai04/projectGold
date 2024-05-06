@@ -1,2 +1,5 @@
 .env
 node_modules
+readme.txt
+table_migration.sql
+.gitignore
